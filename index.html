@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful pages</title>
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .flex-item {
+            background-color: #808080;
+            padding: 120px;
+            margin: 10px;
+            color: white;
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item"> 1</div>
+        <div class="flex-item"> 2</div>
+        <div class="flex-item"> 3</div>
+    </div>
+
+    <script>
+                const flexContainer = document.querySelector('.flex-container');
+        flexContainer.style.backgroundColor = '#e0e0e0';
+        flexContainer.style.border = '2px solid #000';
+
+       
+        const flexItems = document.querySelectorAll('.flex-item');
+        flexItems.forEach((item, index) => {
+            item.style.backgroundColor = ['#FF5733', '#33FF57', '#3357FF'][index];
+            item.style.border = '2px dashed #000';
+            item.style.color = '#fff';
+        });
+    </script>
+</body>
+</html>
